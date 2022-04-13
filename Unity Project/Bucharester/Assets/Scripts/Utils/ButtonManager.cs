@@ -40,5 +40,8 @@ public class ButtonManager : MonoBehaviour
         panel.SetActive(false);
     }
 
-
+    public void OpenClose()
+    {
+        panel.SetActive(!panel.activeSelf);
+    }
 }
