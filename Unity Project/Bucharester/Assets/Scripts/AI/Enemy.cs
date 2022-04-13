@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     State<Enemy> currentState = null;
     public int nr;
     public bool hasAttacked = false;
+    int threatLevel = 1;
+    public Vector3 escapeDirection = Vector3.zero;
 
     private bool timerStarted = false;
 
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
     {
         ChangeState(new LookForPlayer());
         agent.stoppingDistance = 3.25f;
+        escapeDirection.Normalize();
     }
 
     
@@ -67,6 +70,7 @@ public class Enemy : MonoBehaviour
         else
             return false;
     }
+
 
     /// <summary>
     /// Checks to see if the target is within the sight radius

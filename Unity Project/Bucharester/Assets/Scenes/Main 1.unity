@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7b6059db9fe2249ad42caa29ed43fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scareEnemies: 0
   hearts:
   - {fileID: 2013762826}
   - {fileID: 1244446119}
@@ -3120,8 +3121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1868738451}
-  lookRadius: 20
+  lookRadius: 15
   attackRadius: 5
+  avoidRadius: 20
   attackCooldown: 1
   player: {fileID: 382776009}
   scoutingPoints:
@@ -3131,6 +3133,7 @@ MonoBehaviour:
   - {fileID: 1943255876}
   nr: 0
   hasAttacked: 0
+  escapeDirection: {x: 0, y: 0, z: 0}
 --- !u!65 &1868738447
 BoxCollider:
   m_ObjectHideFlags: 0

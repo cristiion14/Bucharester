@@ -57,6 +57,9 @@ public class LookForPlayer : State<Enemy>
         {
             agent.ChangeState(new FollowPlayerState());
         }
+
+        if (agent.player.GetComponent<Player>().scareEnemies)
+            agent.ChangeState(new AvoidPlayerState());
     }
 
     public override void OnExit(Enemy agent)

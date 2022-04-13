@@ -8,11 +8,25 @@ public class Player : MonoBehaviour
     int maxHealth = 3;
     int healthCounter = 3;
 
+    public bool scareEnemies = false;
+    
+
     public Image[] hearts;
 
     private void Start()
     {
         UpdateHearts();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+            scareEnemies = true;
+        if (Input.GetKeyDown(KeyCode.L))
+            scareEnemies = false;
+
+
+
     }
 
     public void TakeDMG(int amount)

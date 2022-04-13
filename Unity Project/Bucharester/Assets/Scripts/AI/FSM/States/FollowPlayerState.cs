@@ -19,6 +19,9 @@ public class FollowPlayerState :State<Enemy>
 
         if (agent.IsInAttackingArea())
             agent.ChangeState(new AttackingState());
+
+        if (agent.player.GetComponent<Player>().scareEnemies)
+            agent.ChangeState(new AvoidPlayerState());
     }
 
     public override void OnExit(Enemy agent)
